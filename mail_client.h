@@ -28,6 +28,8 @@ private slots:
 
     void on_title_clicked();
 
+    void on_trash_2_clicked();
+
 signals:
     void display(int number);
 

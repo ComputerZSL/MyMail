@@ -56,6 +56,11 @@ void Mail_Client::on_inbox_2_clicked()
     ui->main_box->setCurrentWidget(ui->main_boxPage2);
 }
 
+void Mail_Client::on_trash_2_clicked()
+{
+    ui->main_box->setCurrentWidget(ui->main_boxPage3);
+}
+
 void Mail_Client::on_title_clicked()
 {
     emit display(1);

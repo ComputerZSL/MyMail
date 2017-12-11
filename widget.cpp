@@ -11,7 +11,7 @@
 Widget::Widget(QWidget *parent) :
     QWidget(parent)
 {
-    setFixedSize(400, 400);
+    setFixedSize(400, 300);
     Select_mail = new select_mail;
     Log_in = new log_in;
     stackLayout = new QStackedLayout;
