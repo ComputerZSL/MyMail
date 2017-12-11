@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/">
+        <file>images/163_mail.png</file>
+    </qresource>
+</RCC>

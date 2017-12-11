@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/mail_logo/qq"/>
+    <qresource prefix="/">
+        <file>images/qq_mail.png</file>
+    </qresource>
+</RCC>

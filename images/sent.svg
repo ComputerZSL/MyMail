@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="15px" height="12px" viewBox="0 0 15 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 43.1 (39012) - http://www.bohemiancoding.com/sketch -->
+    <title>SVGID_117_</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M14.0625,0 L0.9375,0 C0.421875,0 0,0.421875 0,0.9375 L0,2.625 L0,10.3125 C0,10.828125 0.421875,11.25 0.9375,11.25 L14.0625,11.25 C14.578125,11.25 15,10.828125 15,10.3125 L15,2.625 L15,0.9375 C15,0.421875 14.578125,0 14.0625,0 L14.0625,0 L14.0625,0 Z M12.75,1.875 L7.5,5.484375 L2.25,1.875 L12.75,1.875 L12.75,1.875 Z M13.125,8.90625 C13.125,9.1875 12.9375,9.375 12.65625,9.375 L2.34375,9.375 C2.0625,9.375 1.875,9.1875 1.875,8.90625 L1.875,3.890625 L7.03125,7.359375 C7.171875,7.453125 7.359375,7.5 7.5,7.5 C7.640625,7.5 7.828125,7.453125 7.96875,7.359375 L13.125,3.890625 L13.125,8.90625 L13.125,8.90625 Z" id="path-1"></path>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Email-Client-Concept" transform="translate(-152.000000, -364.000000)">
+            <g id="LeftBlock" transform="translate(110.000000, 99.000000)">
+                <g id="MenuLeft" transform="translate(42.000000, 185.000000)">
+                    <g id="IcoSent" transform="translate(0.000000, 80.000000)">
+                        <mask id="mask-2" fill="white">
+                            <use xlink:href="#path-1"></use>
+                        </mask>
+                        <use id="SVGID_117_" fill="#D8D8D8" xlink:href="#path-1"></use>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

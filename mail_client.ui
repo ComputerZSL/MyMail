@@ -1,0 +1,1018 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Mail_Client</class>
+ <widget class="QWidget" name="Mail_Client">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>780</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color:rgb(247, 249, 249);  </string>
+  </property>
+  <widget class="QWidget" name="write_sideBar" native="true">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>161</width>
+     <height>121</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color:rgb(247, 249, 249);
+border-top-left-radius: 4px; 
+border-top-right-radius: 4px; 
+border-bottom-left-radius: 0px; 
+border-bottom-right-radius: 0px; </string>
+   </property>
+   <widget class="QToolButton" name="write_bar">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>70</y>
+      <width>141</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>-1</pointsize>
+      <weight>50</weight>
+      <italic>false</italic>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">    
+QToolButton {
+    background-color:rgb(92, 172, 222);  
+    color: rgb(255, 255, 255);
+    font: 11px;
+    border-style:none;  
+    padding: 0px 40px;
+    border-radius:2px;
+}</string>
+    </property>
+    <property name="text">
+     <string>    写信</string>
+    </property>
+    <property name="icon">
+     <iconset resource="client.qrc">
+      <normaloff>:/images/write.svg</normaloff>:/images/write.svg</iconset>
+    </property>
+    <property name="toolButtonStyle">
+     <enum>Qt::ToolButtonTextBesideIcon</enum>
+    </property>
+    <property name="autoRaise">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="myname">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>20</y>
+      <width>101</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">    color: rgb(84, 95, 102);
+    font: 14px;</string>
+    </property>
+    <property name="text">
+     <string>Stetsenko Igor</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="mymail">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>40</y>
+      <width>91</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(155, 155, 155);
+font: 10px</string>
+    </property>
+    <property name="text">
+     <string>example@me.com</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QWidget" name="sideBar" native="true">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>120</y>
+     <width>161</width>
+     <height>481</height>
+    </rect>
+   </property>
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color:rgb(247, 249, 249);  
+border-top-left-radius: 0px; 
+border-top-right-radius: 0px; 
+border-bottom-left-radius: 4px; 
+border-bottom-right-radius: 4px; </string>
+   </property>
+   <widget class="QToolButton" name="inbox_2">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>161</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"> QToolButton {  
+    background-color:rgb(247, 249, 249);  
+    color: rgb(84, 95, 102);
+    font: 11px;
+    border-style:none; 
+    padding: 0px 20px;
+}  
+
+ QToolButton:pressed, QToolButton:checked {  
+    background-color: rgb(255, 255, 255); 
+}</string>
+    </property>
+    <property name="text">
+     <string>   收件箱</string>
+    </property>
+    <property name="icon">
+     <iconset resource="client.qrc">
+      <normaloff>:/images/inbox.svg</normaloff>:/images/inbox.svg</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>15</width>
+      <height>15</height>
+     </size>
+    </property>
+    <property name="checkable">
+     <bool>true</bool>
+    </property>
+    <property name="autoRepeat">
+     <bool>false</bool>
+    </property>
+    <property name="popupMode">
+     <enum>QToolButton::DelayedPopup</enum>
+    </property>
+    <property name="toolButtonStyle">
+     <enum>Qt::ToolButtonTextBesideIcon</enum>
+    </property>
+    <property name="autoRaise">
+     <bool>false</bool>
+    </property>
+    <property name="arrowType">
+     <enum>Qt::NoArrow</enum>
+    </property>
+   </widget>
+   <widget class="QToolButton" name="sent_2">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>80</y>
+      <width>161</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"> QToolButton {  
+    background-color:rgb(247, 249, 249);  
+    color: rgb(84, 95, 102);
+    font: 11px;
+    border-style:none;  
+    padding: 0px 20px;
+}  
+
+ QToolButton:pressed, QToolButton:checked {  
+    background-color:rgb(255, 255, 255); 
+}
+
+QToolButton:checked{    /*选中后*/  
+    background-color:rgb(255, 255, 255); 
+    color:rgb(84, 95, 102); 
+    border-style:none;   
+}  </string>
+    </property>
+    <property name="text">
+     <string>   已发送邮件</string>
+    </property>
+    <property name="icon">
+     <iconset resource="client.qrc">
+      <normaloff>:/images/sent.svg</normaloff>:/images/sent.svg</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>15</width>
+      <height>12</height>
+     </size>
+    </property>
+    <property name="checkable">
+     <bool>true</bool>
+    </property>
+    <property name="autoRepeat">
+     <bool>false</bool>
+    </property>
+    <property name="toolButtonStyle">
+     <enum>Qt::ToolButtonTextBesideIcon</enum>
+    </property>
+   </widget>
+   <widget class="QToolButton" name="trash_2">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>40</y>
+      <width>161</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"> QToolButton {  
+    background-color:rgb(247, 249, 249);  
+    color: rgb(84, 95, 102);
+    font: 11px;
+    border-style:none;  
+    padding: 0px 20px;
+}  
+
+ QToolButton:pressed, QToolButton:checked {  
+    background-color:rgb(255, 255, 255); 
+}</string>
+    </property>
+    <property name="text">
+     <string>   垃圾箱</string>
+    </property>
+    <property name="icon">
+     <iconset resource="client.qrc">
+      <normaloff>:/images/trash.svg</normaloff>:/images/trash.svg</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>15</width>
+      <height>14</height>
+     </size>
+    </property>
+    <property name="checkable">
+     <bool>true</bool>
+    </property>
+    <property name="toolButtonStyle">
+     <enum>Qt::ToolButtonTextBesideIcon</enum>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QTabWidget" name="main_box">
+   <property name="geometry">
+    <rect>
+     <x>160</x>
+     <y>-30</y>
+     <width>626</width>
+     <height>631</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background: rgb(255, 255, 255)</string>
+   </property>
+   <property name="currentIndex">
+    <number>1</number>
+   </property>
+   <widget class="QWidget" name="main_boxPage1" native="true">
+    <attribute name="title">
+     <string/>
+    </attribute>
+    <widget class="QWidget" name="write_box" native="true">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>621</width>
+       <height>601</height>
+      </rect>
+     </property>
+     <widget class="QLabel" name="receiver">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>30</y>
+        <width>41</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(84, 95, 102);</string>
+      </property>
+      <property name="text">
+       <string>收件人</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="input_receiver">
+      <property name="geometry">
+       <rect>
+        <x>90</x>
+        <y>27</y>
+        <width>501</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLineEdit {
+    border: 1px groove #DBDCDC;
+    border-radius:2px;
+}</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="input_theme">
+      <property name="geometry">
+       <rect>
+        <x>90</x>
+        <y>68</y>
+        <width>501</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLineEdit {
+    border: 1px groove #DBDCDC;
+    border-radius:2px;
+}</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="theme">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>70</y>
+        <width>31</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(84, 95, 102);</string>
+      </property>
+      <property name="text">
+       <string>主题</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>130</y>
+        <width>31</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(84, 95, 102);</string>
+      </property>
+      <property name="text">
+       <string>正文</string>
+      </property>
+     </widget>
+     <widget class="QTextEdit" name="textbox">
+      <property name="geometry">
+       <rect>
+        <x>90</x>
+        <y>130</y>
+        <width>501</width>
+        <height>401</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QTextEdit {
+    border: 1px groove #DBDCDC;
+    border-radius:2px;
+}</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="sendButton">
+      <property name="geometry">
+       <rect>
+        <x>500</x>
+        <y>550</y>
+        <width>85</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+    background-color: rgb(255, 255, 255);
+    color: rgb(84, 95, 102);
+    border-radius: 4px;  
+    border: 1px groove #DBDCDC;
+}
+
+QPushButton:pressed{
+     background-color:rgb(92, 172, 222);
+     color: rgb(255, 255, 255);
+}</string>
+      </property>
+      <property name="text">
+       <string>发送</string>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="main_boxPage2" native="true">
+    <attribute name="title">
+     <string/>
+    </attribute>
+    <widget class="QFrame" name="receive_box">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>20</y>
+       <width>601</width>
+       <height>581</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border: none;
+shadow: 0 1px 0 0 rgba(0,0,0,0.02);</string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <widget class="QWidget" name="mail" native="true">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>40</y>
+        <width>601</width>
+        <height>121</height>
+       </rect>
+      </property>
+      <widget class="QLabel" name="time">
+       <property name="geometry">
+        <rect>
+         <x>540</x>
+         <y>10</y>
+         <width>51</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>13</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: #828A8F;</string>
+       </property>
+       <property name="text">
+        <string>5:57 pm</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="from">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>10</y>
+         <width>341</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>13</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: #828A8F;</string>
+       </property>
+       <property name="text">
+        <string>iCloud</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="overview">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>70</y>
+         <width>541</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>541</width>
+         <height>16777215</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: #828A8F;</string>
+       </property>
+       <property name="text">
+        <string>尊敬的Maggie，您好：感谢您使用 iCloud 来安全地储存 iOS 设备中的重要信息。您的5GB...</string>
+       </property>
+       <property name="scaledContents">
+        <bool>false</bool>
+       </property>
+      </widget>
+      <widget class="QLabel" name="sign">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>50</y>
+         <width>16</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap resource="icon.qrc">:/images/unread_sign.svg</pixmap>
+       </property>
+       <property name="scaledContents">
+        <bool>false</bool>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="title">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>40</y>
+         <width>551</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>16</pointsize>
+        </font>
+       </property>
+       <property name="layoutDirection">
+        <enum>Qt::LeftToRight</enum>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: #485259;
+text-align: left;</string>
+       </property>
+       <property name="text">
+        <string>您的 iCloud 储存空间容量仅剩 25%</string>
+       </property>
+       <property name="checkable">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="mail_2" native="true">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>160</y>
+        <width>601</width>
+        <height>121</height>
+       </rect>
+      </property>
+      <widget class="QLabel" name="from_2">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>10</y>
+         <width>361</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>13</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: #828A8F;</string>
+       </property>
+       <property name="text">
+        <string>Apple</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="time_2">
+       <property name="geometry">
+        <rect>
+         <x>540</x>
+         <y>10</y>
+         <width>51</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>13</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: #828A8F;</string>
+       </property>
+       <property name="text">
+        <string>昨天</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="title_2">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>40</y>
+         <width>551</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>16</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: #485259;</string>
+       </property>
+       <property name="text">
+        <string>您的 Apple ID 被用于在 iPhone 5s 上登录 iCloud</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="overview_2">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>70</y>
+         <width>541</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>541</width>
+         <height>16777215</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: #828A8F;</string>
+       </property>
+       <property name="text">
+        <string>如果您看过上述信息，请忽略此电子邮件。 </string>
+       </property>
+       <property name="scaledContents">
+        <bool>false</bool>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="mail_3" native="true">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>280</y>
+        <width>601</width>
+        <height>121</height>
+       </rect>
+      </property>
+      <widget class="QLabel" name="time_3">
+       <property name="geometry">
+        <rect>
+         <x>540</x>
+         <y>10</y>
+         <width>51</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>13</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: #828A8F;</string>
+       </property>
+       <property name="text">
+        <string>17/10/03</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="from_3">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>10</y>
+         <width>341</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>13</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: #828A8F;</string>
+       </property>
+       <property name="text">
+        <string>京东JD.com</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="title_3">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>40</y>
+         <width>551</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>16</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: #485259;</string>
+       </property>
+       <property name="text">
+        <string>您的京东2017年9月月度账单 欢迎点击查看
+</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="overview_3">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>70</y>
+         <width>541</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>541</width>
+         <height>16777215</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: #828A8F;</string>
+       </property>
+       <property name="text">
+        <string>亲爱的xxxxxxxx，您好：您最新的月度账单已出，欢迎您查看。</string>
+       </property>
+       <property name="scaledContents">
+        <bool>false</bool>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="mail_4" native="true">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>400</y>
+        <width>601</width>
+        <height>121</height>
+       </rect>
+      </property>
+      <widget class="QLabel" name="time_4">
+       <property name="geometry">
+        <rect>
+         <x>540</x>
+         <y>10</y>
+         <width>51</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>13</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: #828A8F;</string>
+       </property>
+       <property name="text">
+        <string>17/10/01</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="from_4">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>10</y>
+         <width>341</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>13</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: #828A8F;</string>
+       </property>
+       <property name="text">
+        <string>QQ邮箱管理员</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="title_4">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>40</y>
+         <width>551</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>16</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: #485259;</string>
+       </property>
+       <property name="text">
+        <string>中转站文件到期提醒</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="overview_4">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>70</y>
+         <width>541</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>541</width>
+         <height>16777215</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: #828A8F;</string>
+       </property>
+       <property name="text">
+        <string>亲爱的用户：你的以下中转站文件即将过期，请及时下载，或提醒你的朋友下载。</string>
+       </property>
+       <property name="scaledContents">
+        <bool>false</bool>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QPushButton" name="next_page">
+      <property name="geometry">
+       <rect>
+        <x>480</x>
+        <y>530</y>
+        <width>93</width>
+        <height>26</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+    background-color: rgb(255, 255, 255);
+    color: rgb(84, 95, 102);
+    border-radius: 4px;  
+    border: 1px groove #DBDCDC;
+}
+
+QPushButton:pressed{
+     background-color:rgb(92, 172, 222);
+     color: rgb(255, 255, 255);
+}</string>
+      </property>
+      <property name="text">
+       <string>下一页</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="page_num">
+      <property name="geometry">
+       <rect>
+        <x>280</x>
+        <y>537</y>
+        <width>60</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(84, 95, 102);</string>
+      </property>
+      <property name="text">
+       <string>1 / 2页 </string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="delete_mail">
+      <property name="geometry">
+       <rect>
+        <x>510</x>
+        <y>0</y>
+        <width>71</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+    background-color: rgb(255, 255, 255);
+    color: rgb(84, 95, 102);
+    border-radius: 4px;  
+    border: 1px groove #DBDCDC;
+}
+
+QPushButton:pressed{
+     background-color:rgb(92, 172, 222);
+     color: rgb(255, 255, 255);
+}</string>
+      </property>
+      <property name="text">
+       <string>删除</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="select_mail">
+      <property name="geometry">
+       <rect>
+        <x>420</x>
+        <y>0</y>
+        <width>71</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+    background-color: rgb(255, 255, 255);
+    color: rgb(84, 95, 102);
+    border-radius: 4px;  
+    border: 1px groove #DBDCDC;
+}
+
+QPushButton:pressed{
+     background-color:rgb(92, 172, 222);
+     color: rgb(255, 255, 255);
+}</string>
+      </property>
+      <property name="text">
+       <string>选择</string>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+  </widget>
+  <zorder>main_box</zorder>
+  <zorder>write_sideBar</zorder>
+  <zorder>sideBar</zorder>
+ </widget>
+ <resources>
+  <include location="client.qrc"/>
+  <include location="icon.qrc"/>
+ </resources>
+ <connections/>
+</ui>
