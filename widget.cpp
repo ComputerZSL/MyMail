@@ -20,6 +20,8 @@ Widget::Widget(QWidget *parent) :
     connect(Select_mail, &select_mail::display, stackLayout, &QStackedLayout::setCurrentIndex);             // 0
     connect(Log_in, &log_in::display, stackLayout, &QStackedLayout::setCurrentIndex);             // 1
 
+    connect(Select_mail, &select_mail::selectMail, Log_in, &log_in::selectMail);
+
     mainLayout = new QVBoxLayout;
     mainLayout->addLayout(stackLayout);
     setLayout(mainLayout);

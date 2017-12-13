@@ -3,6 +3,13 @@
 
 #include <QWidget>
 
+#include "mailSocket.h"
+#include "mailManager.h"
+
+#define QQ_MAIL 10001
+#define YAHOO_MAIL 10002
+#define WY_MAIL 10003
+
 class select_mail;
 class log_in;
 class QStackedLayout;

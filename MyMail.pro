@@ -22,6 +22,10 @@ DEFINES += QT_DEPRECATED_WARNINGS
 # You can also select to disable deprecated APIs only up to a certain version of Qt.
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
+INCLUDEPATH += /usr/local/Cellar/openssl/1.0.2n/include
+
+LIBS += -L/usr/local/Cellar/openssl/1.0.2n/lib -lcrypto
+LIBS += -L/usr/local/Cellar/openssl/1.0.2n/lib -lssl
 
 SOURCES += \
         main.cpp \
@@ -30,7 +34,10 @@ SOURCES += \
     log_in.cpp \
     mail_client.cpp \
     widget2_mail.cpp \
-    mail_details.cpp
+    mail_details.cpp \
+    mailSocket.cpp \
+    mailManager.cpp \
+    base64.cpp
 
 HEADERS += \
         widget.h \
@@ -38,7 +45,10 @@ HEADERS += \
     select_mail.h \
     mail_client.h \
     widget2_mail.h \
-    mail_details.h
+    mail_details.h \
+    mailSocket.h \
+    mailManager.h \
+    base64.h
 
 FORMS += \
     select_mail.ui \

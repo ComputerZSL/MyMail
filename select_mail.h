@@ -3,6 +3,11 @@
 
 #include <QWidget>
 
+#include <QDebug>
+#include <QString>
+#include <QButtonGroup>
+#include <QRadioButton>
+
 class log_in;
 
 namespace Ui {
@@ -19,6 +24,7 @@ public:
 
 signals:
     void display(int number);
+    void selectMail(int mail);
 
 private slots:
     void on_nextPushButton_clicked();
@@ -26,6 +32,11 @@ private slots:
 private:
     Ui::select_mail *ui;
     log_in *Log_in;
+
+    QButtonGroup *group;
+    QRadioButton *WY_Button;
+    QRadioButton *QQ_Button;
+    QRadioButton *Yahoo_Button;
 };
 
 #endif // SELECT_MAIL_H
